@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react';
 function App() {
   const [s, sets] = useState([]);
   async function press(){
-    fetch('http://localhost:4000/info',{
+    fetch('https://test-udpj.onrender.com/info',{
       credentials: 'include'
     }).then(r => {
       r.json().then(a => {

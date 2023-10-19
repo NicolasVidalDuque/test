@@ -24,4 +24,8 @@ app.get('/info', (req, res) => {
   res.json(arr).status(200);
 })
 
+app.get('/', (req, res) => {
+  res.json(process.env.HOST).status(200);
+})
+
 app.listen(4000);
