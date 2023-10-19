@@ -1,13 +1,14 @@
 const express = require('express');
-const cors = require('cors')
+const cors = require('cors');
 const app = express();
 
+require('dotenv').config();
 
 app.use(express.json());
 app.use(cors({
   credentials:true,
   headers:["Content-Type"],
-  origin: "http://localhost:3000"
+  origin:process.env.HOST 
 }))
 
 function generate(){
